@@ -10,7 +10,7 @@ const onResize = () => {requestAnimationFrame(() => {
   window.xprops._onChangeSize(document.documentElement.getBoundingClientRect().height);
 })}
 window.addEventListener("DOMContentLoaded", () => {
-  windows.xprops._onLoaded(document.documentElement.getBoundingClientRect().height);
+  window.xprops._onLoaded(document.documentElement.getBoundingClientRect().height);
   window.xprops._onChangeSize(document.documentElement.getBoundingClientRect().height)
 });
 window.addEventListener('resize', onResize);
