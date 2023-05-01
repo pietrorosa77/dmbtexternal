@@ -11,7 +11,8 @@ export default (props) => {
   }
 
   const onMoveNext = () => {
-    props.onProceed(props.ports.ext1, 'Hi!i answered this', 'string')
+    debugger
+    props.onProceed(props.ports.exit2, 'Hi!i answered this', 'string')
   }
   return (
     <>
