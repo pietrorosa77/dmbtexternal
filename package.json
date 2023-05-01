@@ -11,10 +11,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "zoid":"9.0.86",
-    "primeflex": "^3.3.0",
-    "primeicons": "^6.0.1",
-    "primereact": "^9.2.0"
+    "zoid":"9.0.86"
   },
   "devDependencies": {
     "babel-preset-nano-react-app": "^0.1.0",
