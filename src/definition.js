@@ -2,22 +2,18 @@ import * as zoid from "zoid/dist/zoid.frameworks";
 
 const ExternalDummbotTest = zoid.create({
   tag: "ext-dmbt",
+  exports: {
+    getContentSize: {
+      type: "function",
+    },
+  },
 });
 
 window.ExternalDummbotTest = ExternalDummbotTest;
 
 if (window.xprops) {
-  const onResize = () => {
-    requestAnimationFrame(() => {
-      window.xprops._onChangeSize(document.documentElement.getBoundingClientRect().height);
-    })
-  }
-
-  window.addEventListener('resize', onResize);
-
   window.addEventListener("load", () => {
-    window.xprops._onLoaded(document.documentElement.getBoundingClientRect().height);
-    onResize();
+    window.xprops._onLoaded();
   });
 } else {
   window.xprops = {
@@ -43,3 +39,9 @@ if (window.xprops) {
     }
   }
 }
+
+window.xprops.export({
+  getContentSize: () => {
+    return document.body.scrollHeight + 50;
+  },
+});
